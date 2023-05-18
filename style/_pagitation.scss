@@ -1,0 +1,33 @@
+#page-pagitation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+  margin-bottom: 23px;
+  
+  #pagitation {
+    background: #ededed;
+    border-radius: 20px;
+
+    .pagitation-numbers {
+      background: #ededed;
+      padding: 10px 15px;
+  
+      &:first-child {
+        border-radius: 20px 0 0 20px;
+        // padding-left: 30px;
+      }
+      &:last-child {
+        border-radius: 0 20px 20px 0;
+        // padding-right: 30px;
+      }
+    }
+  
+    .active {
+      background-color: #6F64F8;
+      color: #fff;
+      border-radius: 50px !important;
+      padding: 10px 20px;
+    }
+  }
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>shop</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content-row">
+        <div class="filter-col">
+          <p class="header">Filters</p>
+          <div class="filters">
+            <section class="options-form" id="multi-range">
+              <h6>multi range</h6>
+              <div class="option-values">
+                <div class="item">
+                  <div class="option">
+                    <input type="radio" id="range-10" name="range" value="10">
+                    <label for="range-10">$10</label>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="radio" id="range-10-100" name="range" value="10-100">
+                    <label for="range-10-100">$10-$100</label>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="radio" id="range-100-500" name="range" value="100-500">
+                    <label for="range-100-500">$100-$500</label>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="radio" id="range-500" name="range" value="500">
+                    <label for="range-500">$500</label>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="radio" id="range-all" name="range" value="all" checked>
+                    <label for="range-all">All</label>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="options-form" id="slider">
+              <div class="header">
+                <h6>slider</h6>
+                <div class="option-values">
+                  <input type="range" id="range">
+                </div>
+              </div>
+            </section>
+            <section class="options-form" id="category">
+              <h6>category</h6>
+              <div class="option-values">
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="phone" name="phone" value="phone">
+                    <label for="phone">cell phones</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="computerTablet" name="computerTablet" value="computerTablet">
+                    <label for="computerTablet">computers & Tablets</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="phoneAccessories" name="phoneAccessories" value="phoneAccessories">
+                    <label for="phoneAccessories">cell Phone Accessories</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="appliances" name="appliances" value="appliances">
+                    <label for="appliances">appliances</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="audio" name="audio" value="audio">
+                    <label for="audio">audio</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="iphoneAccessories" name="iphoneAccessories" value="iphoneAccessories">
+                    <label for="iphoneAccessories">iPhone Accessories</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="camera" name="camera" value="camera">
+                    <label for="camera">Cameras & Camcorders</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="iphoneCases" name="iphoneCases" value="iphoneCases">
+                    <label for="iphoneCases">iPhone Cases & Clips</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="tv" name="tv" value="tv">
+                    <label for="tv">TV & Home Theatre</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="kitchen" name="kitchen" value="kitchen">
+                    <label for="kitchen">Small Kitchen Appliances</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+              </div>
+            </section>
+            <section class="options-form" id="brand">
+              <h6>brand</h6>
+              <div class="option-values">
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="insigni" name="insigni" value="insigni">
+                    <label for="insigni">insigni</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="samsung" name="samsung" value="samsung">
+                    <label for="samsung">samsung</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="apple" name="apple" value="apple">
+                    <label for="apple">apple</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="hp" name="hp" value="hp">
+                    <label for="hp">hp</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="sony" name="sony" value="sony">
+                    <label for="sony">sony</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="metra" name="metra" value="metra">
+                    <label for="metra">metra</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="dyne" name="dyne" value="dyne">
+                    <label for="dyne">dyne</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="lg" name="lg" value="lg">
+                    <label for="lg">LG</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="cancon" name="cancon" value="cancon">
+                    <label for="cancon">cancon</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="checkbox" id="speck" name="speck" value="speck">
+                    <label for="speck">Speck</label>
+                  </div>
+                  <span class="quantity">100</span>
+                </div>
+              </div>
+            </section>
+            <section class="options-form">
+              <h6>Rating</h6>
+              <div class="option-values">
+                <div class="item">
+                  <button>
+                    <div class="stars">
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star active"></i>
+                      <p>& Up</p>
+                    </div>
+                  </button>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <button>
+                    <div class="stars">
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <p>& Up</p>
+                    </div>
+                  </button>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <button>
+                    <div class="stars">
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <p>& Up</p>
+                    </div>
+                  </button>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <button>
+                    <div class="stars">
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <p>& Up</p>
+                    </div>
+                  </button>
+                  <span class="quantity">100</span>
+                </div>
+                <div class="item">
+                  <button>
+                    <div class="stars">
+                      <i class="fa-regular fa-star active"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <p>& Up</p>
+                    </div>
+                  </button>
+                  <span class="quantity">100</span>
+                </div>
+              </div>
+            </section>
+          </div>
+          <button id="reset">CLEAR ALL FILTERS</button>
+        </div>
+        <div id="main-col" class="main-col">
+          <p class="header">
+            <span id="card-quantity">100</span>
+            results found in
+            <span id="result-time">5</span>ms
+          </p>
+          <main class="main">
+            <div class="search-bar">
+              <input type="text" id="search" placeholder="Search hear">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="cards-container"></div>
+          </main>
+        </div>
+      </div>
+      <div id="page-pagitation">
+        <div id="pagitation"></div>
+      </div>
+    </div>
+    
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

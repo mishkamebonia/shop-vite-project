@@ -1,0 +1,41 @@
+@import'./variables';
+@import './filters';
+@import './main';
+@import './pagitation';
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,body{ scroll-behavior: smooth}
+
+body {
+  min-height: 100vh;
+  background: #F9F9F9;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.0778245);
+}
+
+input, button {
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+.wrapper {
+  max-width: 1643px;
+  padding: 22px;
+  margin: 0 auto;
+}
+
+.content-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
