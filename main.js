@@ -1,5 +1,5 @@
 import Data from "./MOCK_DATA.json" assert { type: 'json' }
 
-import {renderProductCards} from './scripts/card.js'
+import {renderProductCards} from './scripts/renderCards.js'
 
-renderProductCards()
+renderProductCards(Data)

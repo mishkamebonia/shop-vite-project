@@ -107,6 +107,11 @@
   opacity: 0.9;
 }
 
+@media only screen and (max-width: 1200px) {
+  .filter-col {
+    display: none;
+  }
+}
 .main-col {
   flex: 1 1 70%;
   min-width: 30ch;
@@ -172,6 +177,7 @@
 }
 .main-col main #cards-container .card .image img {
   width: 100%;
+  aspect-ratio: 16/9;
   display: block;
   border-radius: 8px 8px 0 0;
   -webkit-user-select: none;
@@ -257,38 +263,38 @@
   font-weight: 600;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 992px) {
   #cards-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 600px) {
   #cards-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
-#page-pagitation {
+#pagitation-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 45px;
   margin-bottom: 23px;
 }
-#page-pagitation #pagitation {
+#pagitation-wrapper #pagitation-buttons-row {
   background: #ededed;
   border-radius: 20px;
 }
-#page-pagitation #pagitation .pagitation-numbers {
+#pagitation-wrapper #pagitation-buttons-row .pagitation-numbers {
   background: #ededed;
   padding: 10px 15px;
 }
-#page-pagitation #pagitation .pagitation-numbers:first-child {
+#pagitation-wrapper #pagitation-buttons-row .pagitation-numbers:first-child {
   border-radius: 20px 0 0 20px;
 }
-#page-pagitation #pagitation .pagitation-numbers:last-child {
+#pagitation-wrapper #pagitation-buttons-row .pagitation-numbers:last-child {
   border-radius: 0 20px 20px 0;
 }
-#page-pagitation #pagitation .active {
+#pagitation-wrapper #pagitation-buttons-row .active {
   background-color: #6F64F8;
   color: #fff;
   border-radius: 50px !important;
