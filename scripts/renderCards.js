@@ -1,23 +1,32 @@
+// product cards wrapper
 const cardsContainer = document.querySelector("#cards-container")
 
+// pagitation buttons wrapper
 const pagitationWrapper = document.querySelector('#pagitation-buttons-row')
+
+// Product quantity
+const quantityCards = document.querySelector('#card-quantity')
+// Result Time
+const resultTime = document.querySelector('#result-time')
 
 let rows = 9
 let currentPage = 1
 let buttonRows = 10
 
 export function renderProductCards(data) {
+    const startTime = performance.now()
+
     const pagitationCards = pagitationRows(data, rows, currentPage)
 
     cardsContainer.innerHTML = pagitationCards.map(e => {
     return `<div id="${e.id}" class="card">
     <div class="image">
-        <img src="https://dummyimage.com/290x250/000/fff" alt="Dummy Image" />
+        <img src="${e.src}" alt="Dummy Image" />
     </div>
     <div class="container">
         <div class="rating-price">
         <p class="rating">${e.rating} <i class="fa-regular fa-star"></i></p>
-        <p class="price">$${e.price}</p>
+        <p class="price">${e.price}</p>
         </div>
         <div class="description">
         <h5 id="${e.brandId}">${e.productName}</h5>
@@ -40,6 +49,10 @@ export function renderProductCards(data) {
     PagitationButtons(data, pagitationPages(data, rows))
 
     currentPage = 1
+
+    quantityCards.innerHTML = data.length
+    const finishTime = performance.now();
+    resultTime.innerHTML = Math.round(finishTime - startTime)
 }
 
 // create rows
@@ -80,9 +93,9 @@ function PagitationButtons(data, pages) {
     }
 
     let firstButton = document.createElement('button')
-    firstButton.classList.add('page', 'pagitation-numbers')
+    firstButton.classList.add('pagitation-numbers')
     firstButton.innerHTML = `<i class="fa-solid fa-chevron-left"></i>`
-    firstButton.style.background = '#AFD3E2'
+    firstButton.style.background = '#ededed'
     firstButton.value = 1
 
     firstButton.addEventListener('click', () => {
@@ -105,7 +118,7 @@ function PagitationButtons(data, pages) {
 
     for (let page = maxLeft; page <= maxRight; page++) {
     let button = document.createElement('button')
-    button.classList.add('page', 'pagitation-numbers')
+    button.classList.add('pagitation-numbers')
     button.innerText = page
     button.value = page
 
@@ -124,9 +137,9 @@ function PagitationButtons(data, pages) {
     }
 
     let lastButton = document.createElement('button')
-    lastButton.classList.add('page', 'pagitation-numbers')
+    lastButton.classList.add('pagitation-numbers')
     lastButton.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`
-    lastButton.style.background = '#AFD3E2'
+    lastButton.style.background = '#ededed'
     lastButton.value = pages
 
     if (pages != 0) {

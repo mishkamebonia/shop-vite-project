@@ -59,13 +59,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 25px;
         
         img {
           width: 100%;
-          aspect-ratio: 16 / 9;
+          aspect-ratio: 3 / 2;
           display: block;
-          border-radius: 8px 8px 0 0;
+          // border-radius: 8px 8px 0 0;
           user-select: none;
+          object-fit: contain;
         }
       }
       
@@ -95,6 +97,10 @@
             font-weight: 400;
             font-style: normal;
             color: $filterColor;
+
+            &::before {
+              content: '$';
+            }
           }
         }
         
@@ -115,7 +121,12 @@
             line-height: 14px;
             font-weight: 300;
             font-style: normal;
+            height: 30px;
+            overflow: hidden;
+            width: 100%;
             color: $filterColor;
+            // white-space: pre-wrap;
+            // text-overflow: ellipsis;
           }
         }
         

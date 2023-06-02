@@ -22,31 +22,31 @@
               <div class="option-values">
                 <div class="item">
                   <div class="option">
-                    <input type="radio" id="range-10" name="range" value="10">
-                    <label for="range-10">$10</label>
+                    <input type="radio" class="range" id="range-100" name="range" value="100">
+                    <label for="range-100">$100</label>
                   </div>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="radio" id="range-10-100" name="range" value="10-100">
-                    <label for="range-10-100">$10-$100</label>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="option">
-                    <input type="radio" id="range-100-500" name="range" value="100-500">
+                    <input type="radio" class="range" id="range-100-500" name="range" value="min100max500">
                     <label for="range-100-500">$100-$500</label>
                   </div>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="radio" id="range-500" name="range" value="500">
-                    <label for="range-500">$500</label>
+                    <input type="radio" class="range" id="range-500-1000" name="range" value="min500max1000">
+                    <label for="range-500-1000">$500-$1000</label>
                   </div>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="radio" id="range-all" name="range" value="all" checked>
+                    <input type="radio" class="range" id="range-1000" name="range" value="1000">
+                    <label for="range-1000">$1000</label>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="option">
+                    <input type="radio" class="range" id="range-all" name="range" value="all" checked>
                     <label for="range-all">All</label>
                   </div>
                 </div>
@@ -54,9 +54,13 @@
             </section>
             <section class="options-form" id="slider">
               <div class="header">
-                <h6>slider</h6>
+                <div class="row">
+                  <h6>slider</h6>
+                  <span id="slider-range-display"></span>
+                </div>
+
                 <div class="option-values">
-                  <input type="range" id="range">
+                  <input type="range" id="slider-range" name="slider-range" min="0" max="5000" value="1000">
                 </div>
               </div>
             </section>
@@ -65,73 +69,73 @@
               <div class="option-values">
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="phone" name="phone" value="phone">
-                    <label for="phone">cell phones</label>
+                    <input type="checkbox" id="phone" name="phone" value="1" class="category">
+                    <label for="phone">Phones</label>
                   </div>
-                  <span class="quantity">100</span>
+                  <span class="category-quantity" id="phone-quantity"></span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="computerTablet" name="computerTablet" value="computerTablet">
-                    <label for="computerTablet">computers & Tablets</label>
+                    <input type="checkbox" id="drone" name="drone" value="10" class="category">
+                    <label for="drone">Drones</label>
                   </div>
-                  <span class="quantity">100</span>
+                  <span class="category-quantity" id="drone-quantity"></span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="phoneAccessories" name="phoneAccessories" value="phoneAccessories">
-                    <label for="phoneAccessories">cell Phone Accessories</label>
+                    <input type="checkbox" id="tablet" name="tablet" value="2" class="category">
+                    <label for="tablet">Laptopts & Tablets</label>
                   </div>
-                  <span class="quantity">100</span>
+                  <span class="category-quantity" id="tablet-quantity"></span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="appliances" name="appliances" value="appliances">
-                    <label for="appliances">appliances</label>
+                    <input type="checkbox" id="headphone" name="headphone" value="5" class="category">
+                    <label for="headphone">Headphones</label>
                   </div>
-                  <span class="quantity">100</span>
+                  <span class="category-quantity" id="headphone-quantity"></span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="audio" name="audio" value="audio">
-                    <label for="audio">audio</label>
+                    <input type="checkbox" id="audio" name="audio" value="8" class="category">
+                    <label for="audio">Audio</label>
                   </div>
-                  <span class="quantity">100</span>
+                  <span class="category-quantity" id="audio-quantity"></span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="iphoneAccessories" name="iphoneAccessories" value="iphoneAccessories">
-                    <label for="iphoneAccessories">iPhone Accessories</label>
+                    <input type="checkbox" id="computer-accessories" name="computer-accessories" value="4" class="category">
+                    <label for="computer-accessories">Computers and Accessories</label>
                   </div>
-                  <span class="quantity">100</span>
+                  <span class="category-quantity" id="computer-quantity"></span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="camera" name="camera" value="camera">
+                    <input type="checkbox" id="camera" name="camera" value="7" class="category">
                     <label for="camera">Cameras & Camcorders</label>
                   </div>
-                  <span class="quantity">100</span>
+                  <span class="category-quantity" id="camera-quantity"></span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="iphoneCases" name="iphoneCases" value="iphoneCases">
+                    <input type="checkbox" id="iphoneCases" name="iphoneCases" value="9" class="category">
                     <label for="iphoneCases">iPhone Cases & Clips</label>
                   </div>
-                  <span class="quantity">100</span>
+                  <span class="category-quantity" id="case-quantity"></span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="tv" name="tv" value="tv">
+                    <input type="checkbox" id="tv" name="tv" value="3" class="category">
                     <label for="tv">TV & Home Theatre</label>
                   </div>
-                  <span class="quantity">100</span>
+                  <span class="category-quantity" id="tv-quantity"></span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="kitchen" name="kitchen" value="kitchen">
-                    <label for="kitchen">Small Kitchen Appliances</label>
+                    <input type="checkbox" id="watches" name="watches" value="6" class="category">
+                    <label for="watches">watches</label>
                   </div>
-                  <span class="quantity">100</span>
+                  <span class="category-quantity" id="watches-quantity"></span>
                 </div>
               </div>
             </section>
@@ -140,8 +144,8 @@
               <div class="option-values">
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="insigni" name="insigni" value="insigni">
-                    <label for="insigni">insigni</label>
+                    <input type="checkbox" id="apple" name="apple" value="apple">
+                    <label for="apple">Apple</label>
                   </div>
                   <span class="quantity">100</span>
                 </div>
@@ -154,36 +158,36 @@
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="apple" name="apple" value="apple">
-                    <label for="apple">apple</label>
+                    <input type="checkbox" id="hp" name="hp" value="hp">
+                    <label for="hp">HP</label>
                   </div>
                   <span class="quantity">100</span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="hp" name="hp" value="hp">
-                    <label for="hp">hp</label>
+                    <input type="checkbox" id="dell" name="dell" value="dell">
+                    <label for="dell">Dell</label>
                   </div>
                   <span class="quantity">100</span>
                 </div>
                 <div class="item">
                   <div class="option">
                     <input type="checkbox" id="sony" name="sony" value="sony">
-                    <label for="sony">sony</label>
+                    <label for="sony">Sony</label>
                   </div>
                   <span class="quantity">100</span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="metra" name="metra" value="metra">
-                    <label for="metra">metra</label>
+                    <input type="checkbox" id="lenovo" name="lenovo" value="lenovo">
+                    <label for="lenovo">Lenovo</label>
                   </div>
                   <span class="quantity">100</span>
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="dyne" name="dyne" value="dyne">
-                    <label for="dyne">dyne</label>
+                    <input type="checkbox" id="google" name="google" value="google">
+                    <label for="google">Google</label>
                   </div>
                   <span class="quantity">100</span>
                 </div>
@@ -196,8 +200,8 @@
                 </div>
                 <div class="item">
                   <div class="option">
-                    <input type="checkbox" id="cancon" name="cancon" value="cancon">
-                    <label for="cancon">cancon</label>
+                    <input type="checkbox" id="Oneplus" name="Oneplus" value="Oneplus">
+                    <label for="Oneplus">Oneplus</label>
                   </div>
                   <span class="quantity">100</span>
                 </div>
@@ -285,9 +289,9 @@
         </div>
         <div id="main-col" class="main-col">
           <p class="header">
-            <span id="card-quantity">100</span>
+            <span id="card-quantity"></span>
             results found in
-            <span id="result-time">5</span>ms
+            <span id="result-time"></span>ms
           </p>
           <main class="main">
             <div class="search-bar">
@@ -299,7 +303,9 @@
         </div>
       </div>
       <div id="pagitation-wrapper">
+        <div id="next-page"></div>
         <div id="pagitation-buttons-row"></div>
+        <div id="back-page"></div>
       </div>
     </div>
     

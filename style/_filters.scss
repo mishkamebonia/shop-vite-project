@@ -7,6 +7,23 @@
 
   .header {
     @include header;
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+
+      span {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #2c2c2c;
+
+        &::before {
+          content: '$';
+        }
+      }
+    }
   }
   
   .filters {
@@ -73,7 +90,8 @@
           }
         }
 
-        .quantity {
+        .quantity,
+        .category-quantity {
           font-style: normal;
           font-weight: 300;
           font-size: 14px;

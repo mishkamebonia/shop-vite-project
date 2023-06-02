@@ -11,23 +11,22 @@
 
     .pagitation-numbers {
       background: #ededed;
-      padding: 10px 15px;
+      text-align: center;
+      width: 40px;
+      height: 40px;
   
       &:first-child {
         border-radius: 20px 0 0 20px;
-        // padding-left: 30px;
       }
       &:last-child {
         border-radius: 0 20px 20px 0;
-        // padding-right: 30px;
       }
     }
   
     .active {
       background-color: #6F64F8;
       color: #fff;
-      border-radius: 50px !important;
-      padding: 10px 20px;
+      border-radius: 20px !important;
     }
   }
 }
