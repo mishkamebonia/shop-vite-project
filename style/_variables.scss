@@ -27,8 +27,16 @@ $searchColor: #606060;
   transition: all 0.15s;
 
   &:hover {
-    opacity: 0.9;
+    background: rgb(100, 91, 215);
   }
+}
+
+.unvisible {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
 
 // input[type='radio']:after {

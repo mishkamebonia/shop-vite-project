@@ -15,7 +15,7 @@
     <div class="wrapper">
       <div class="content-row">
         <div class="filter-col">
-          <p class="header">Filters</p>
+          <p class="filter-header">Filters</p>
           <div class="filters">
             <section class="options-form" id="multi-range">
               <h6>multi range</h6>
@@ -53,7 +53,7 @@
               </div>
             </section>
             <section class="options-form" id="slider">
-              <div class="header">
+              <div class="slider-header">
                 <div class="row">
                   <h6>slider</h6>
                   <span id="slider-range-display"></span>
@@ -212,6 +212,121 @@
                   </div>
                   <span class="quantity" id="acer-quantity">100</span>
                 </div>
+                <div id="hidden-content" class="unvisible">
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="microsoft" name="microsoft" value="11" class="brand">
+                      <label for="microsoft">Microsoft</label>
+                    </div>
+                    <span class="quantity" id="microsoft-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="alienware" name="alienware" value="12" class="brand">
+                      <label for="alienware">Alienware</label>
+                    </div>
+                    <span class="quantity" id="alienware-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="xiaomi" name="xiaomi" value="13" class="brand">
+                      <label for="xiaomi">Xiaomi</label>
+                    </div>
+                    <span class="quantity" id="xiaomi-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="razer" name="razer" value="14" class="brand">
+                      <label for="razer">Razer</label>
+                    </div>
+                    <span class="quantity" id="razer-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="msi" name="msi" value="15" class="brand">
+                      <label for="msi">MSI</label>
+                    </div>
+                    <span class="quantity" id="msi-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="nvidia" name="nvidia" value="16" class="brand">
+                      <label for="nvidia">Nvidia</label>
+                    </div>
+                    <span class="quantity" id="nvidia-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="bose" name="bose" value="17" class="brand">
+                      <label for="bose">Bose</label>
+                    </div>
+                    <span class="quantity" id="bose-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="gopro" name="gopro" value="18" class="brand">
+                      <label for="gopro">Gopro</label>
+                    </div>
+                    <span class="quantity" id="gopro-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="fitbit" name="fitbit" value="19" class="brand">
+                      <label for="fitbit">Fitbit</label>
+                    </div>
+                    <span class="quantity" id="fitbit-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="canon" name="canon" value="20" class="brand">
+                      <label for="canon">Canon</label>
+                    </div>
+                    <span class="quantity" id="canon-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="nintendo" name="nintendo" value="21" class="brand">
+                      <label for="nintendo">Nintendo</label>
+                    </div>
+                    <span class="quantity" id="nintendo-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="sonos" name="sonos" value="22" class="brand">
+                      <label for="sonos">Sonos</label>
+                    </div>
+                    <span class="quantity" id="sonos-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="dji" name="dji" value="23" class="brand">
+                      <label for="dji">DJI</label>
+                    </div>
+                    <span class="quantity" id="dji-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="amazon" name="amazon" value="24" class="brand">
+                      <label for="amazon">Amazon</label>
+                    </div>
+                    <span class="quantity" id="amazon-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="asus" name="asus" value="25" class="brand">
+                      <label for="asus">Asus</label>
+                    </div>
+                    <span class="quantity" id="asus-quantity">100</span>
+                  </div>
+                  <div class="item">
+                    <div class="option">
+                      <input type="checkbox" id="jbl" name="jbl" value="26" class="brand">
+                      <label for="jbl">JBL</label>
+                    </div>
+                    <span class="quantity" id="jbl-quantity">100</span>
+                  </div>
+                </div>
+                <button id="view-more" class="view-more">view more <i class="view-more-dropdown fa-solid fa-chevron-down"></i></button>
               </div>
             </section>
             <section class="options-form">
@@ -288,11 +403,30 @@
           <button id="reset">CLEAR ALL FILTERS</button>
         </div>
         <div id="main-col" class="main-col">
-          <p class="header">
-            <span id="card-quantity"></span>
-            results found in
-            <span id="result-time"></span>ms
-          </p>
+          <div class="header-row">
+            <p class="main-header">
+              <span id="card-quantity"></span>
+              results found in
+              <span id="result-time"></span>ms
+            </p>
+            <div class="row">
+              <div class="select">
+                <select name="list" id="select-dropdown" class="select-dropdown">
+                  <option value="volvo">Default</option>
+                  <option value="saab">test 1</option>
+                  <option value="opel">test 2</option>
+                  <option value="audi">test 3</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <button class="list-option">
+                <i class="fa-solid fa-border-all"></i>
+              </button>
+              <button class="list-option">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+          </div>
           <main class="main">
             <div class="search-bar">
               <input type="text" id="search" placeholder="Search hear">

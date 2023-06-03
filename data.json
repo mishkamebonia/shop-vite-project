@@ -606,7 +606,7 @@
     "rating": 4.7,
     "description": "The Microsoft Surface Pro 7 is a versatile 2-in-1 device that combines the power of a laptop with the flexibility of a tablet.",
     "categoryId": 2,
-    "brandId": 9,
+    "brandId": 11,
     "src": "https://m.media-amazon.com/images/I/612OuMs29eL._AC_UF894,1000_QL80_.jpg"
   },
   {
@@ -636,7 +636,7 @@
     "rating": 4.7,
     "description": "The Amazon Echo Dot (4th Gen) is a compact and smart speaker with Alexa voice control, improved sound quality, and a stylish design.",
     "categoryId": 8,
-    "brandId": 25,
+    "brandId": 24,
     "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXV6SIFWK8Fwlj8Ms-20eIbUgnf_LIQWXiqA3fdk9jF6GUuUGwf09W0lF2gjTcteHYqVI&usqp=CAU"
   },
   {
@@ -706,7 +706,7 @@
     "rating": 4.7,
     "description": "The ASUS ROG Strix G15 is a high-performance gaming laptop with a powerful GPU, high-refresh-rate display, and customizable RGB lighting.",
     "categoryId": 2,
-    "brandId": 26,
+    "brandId": 25,
     "src": "https://m.media-amazon.com/images/I/81UNFoBh0QL._AC_SS450_.jpg"
   },
   {
@@ -716,7 +716,7 @@
     "rating": 4.7,
     "description": "The JBL Flip 5 is a portable Bluetooth speaker with powerful sound, water resistance, and up to 12 hours of battery life.",
     "categoryId": 8,
-    "brandId": 27,
+    "brandId": 26,
     "src": "https://cdn.shopify.com/s/files/1/0064/0257/2391/products/jbl-flip-5-red-singapore-photo_2000x.jpg?v=1674613413"
   },
   {
@@ -726,7 +726,7 @@
     "rating": 4.9,
     "description": "The Microsoft Xbox Series X is the next-generation gaming console with fast load times, stunning graphics, and backward compatibility with previous Xbox games.",
     "categoryId": 4,
-    "brandId": 9,
+    "brandId": 11,
     "src": "https://m.media-amazon.com/images/I/610LeK9gl5L._AC_SX569_.jpg"
   },
   {

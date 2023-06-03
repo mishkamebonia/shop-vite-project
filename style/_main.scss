@@ -2,8 +2,75 @@
   flex: 1 1 70%;
   min-width: 30ch;
 
-  .header {
-    @include header;
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+
+    .main-header {
+      @include header;
+      margin-bottom: 0;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+
+      .select {
+        position: relative;
+
+        .select-dropdown {
+          width: 135px;
+          height: 40px;
+          border-radius: 8px;
+          outline: none;
+          border: none;
+          background: #fff;
+          color: #2C2C2C;
+          padding: 10px 14px;
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+          font-size: 14px;
+          line-height: 17px;
+          cursor: pointer;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+  
+          transition: all 0.15s;
+  
+          &:hover {
+            background: rgba(44, 44, 44, 0.05);
+          }
+        }
+
+        i {
+          position: absolute;
+          top: 50%;
+          right: 9px;
+          transform: translate(-50%, -50%);
+          font-size: 14px;
+          color: #606060;
+        }
+      }
+
+      .list-option {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: #fff;
+        color: #606060;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+        font-size: 15px;
+
+        transition: all 0.15s;
+
+        &:hover {
+          background: rgba(44, 44, 44, 0.05);
+        }
+      }
+    }
   }
   
   main {
@@ -126,8 +193,6 @@
             overflow: hidden;
             width: 100%;
             color: $filterColor;
-            // white-space: pre-wrap;
-            // text-overflow: ellipsis;
           }
         }
         
@@ -143,7 +208,7 @@
           transition: all 0.15s;
 
           &:hover {
-            opacity: 0.9;
+            background: rgba(44, 44, 44, 0.15);
           }
         }
         #add-cart {
@@ -154,7 +219,8 @@
           transition: all 0.15s;
 
           &:hover {
-            opacity: 0.9;
+            // opacity: 0.9;
+            background: rgb(100, 91, 215);
           }
         }
         
@@ -174,12 +240,6 @@
   }
 }
 }
-
-// @media (max-width: 1122px) {
-//   #cards-container {
-//     max-height: 880px;
-//   }
-// }
 
 @media (max-width: 992px) {
   #cards-container {
