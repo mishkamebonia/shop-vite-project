@@ -48,6 +48,7 @@
     grid-template-rows: repeat(3, 1fr);
     gap: 22px;
     justify-content: space-between;
+    align-items: start;
     min-height: 1200px;
 
     .card {
@@ -59,7 +60,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 25px;
+        margin: 25px 25px 0;
         
         img {
           width: 100%;

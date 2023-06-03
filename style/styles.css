@@ -48,6 +48,36 @@
   position: relative;
   padding-bottom: 25px;
 }
+.filter-col .filters .options-form .option-values .item-phone {
+  order: 1;
+}
+.filter-col .filters .options-form .option-values .item-laptop {
+  order: 2;
+}
+.filter-col .filters .options-form .option-values .item-tv {
+  order: 3;
+}
+.filter-col .filters .options-form .option-values .item-computer {
+  order: 4;
+}
+.filter-col .filters .options-form .option-values .item-headphone {
+  order: 5;
+}
+.filter-col .filters .options-form .option-values .item-watches {
+  order: 6;
+}
+.filter-col .filters .options-form .option-values .item-camera {
+  order: 7;
+}
+.filter-col .filters .options-form .option-values .item-audio {
+  order: 8;
+}
+.filter-col .filters .options-form .option-values .item-case {
+  order: 9;
+}
+.filter-col .filters .options-form .option-values .item-drone {
+  order: 10;
+}
 .filter-col .filters .options-form .option-values .item {
   display: flex;
   justify-content: space-between;
@@ -55,6 +85,9 @@
 }
 .filter-col .filters .options-form .option-values .item input, .filter-col .filters .options-form .option-values .item label {
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .filter-col .filters .options-form .option-values .item label {
   color: #2c2c2c;
@@ -178,6 +211,7 @@
   grid-template-rows: repeat(3, 1fr);
   gap: 22px;
   justify-content: space-between;
+  align-items: start;
   min-height: 1200px;
 }
 .main-col main #cards-container .card {
@@ -189,7 +223,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
+  margin: 25px 25px 0;
 }
 .main-col main #cards-container .card .image img {
   width: 100%;

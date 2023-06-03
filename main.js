@@ -6,7 +6,12 @@ import {searchEngine} from './scripts/searchProduct.js'
 
 import {productFilters} from './scripts/filterProducts.js'
 
+import {productQuantity} from './scripts/quantityProduct.js'
+
 
 renderProductCards(Data)
+
 searchEngine()
+
 productFilters()
+productQuantity()

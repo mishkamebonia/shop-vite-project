@@ -9,7 +9,7 @@ const quantityCards = document.querySelector('#card-quantity')
 // Result Time
 const resultTime = document.querySelector('#result-time')
 
-let rows = 9
+let rows = 12
 let currentPage = 1
 let buttonRows = 10
 

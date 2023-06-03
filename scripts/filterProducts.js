@@ -1,15 +1,15 @@
 import Data from "../data.json" assert { type: "json" };
-
 import { renderProductCards } from "./renderCards.js";
 
 let category = []
 let brand = []
+let selectedPriceRange = null
 
 // all filters
 export function productFilters() {
-  productQuantity()
   multiRange()
   categoryProduct()
+  brandProduct()
 }
 
 function multiRange() {
@@ -18,7 +18,8 @@ function multiRange() {
   // range radios
   rangeRadios.forEach(radio => {
     radio.addEventListener('change', () => {
-      multiRangeFilter()
+      selectedPriceRange = getSelectedPriceRange()
+      applyFilters()
     })
   })
 
@@ -33,43 +34,30 @@ function multiRange() {
   })
 }
 
-// multi range filter
-export function multiRangeFilter() {
+function getSelectedPriceRange() {
   const range100 = document.querySelector('#range-100')
   const rangeFrom100to500 = document.querySelector('#range-100-500')
   const rangeFrom500to1000 = document.querySelector('#range-500-1000')
   const range1000 = document.querySelector('#range-1000')
   const allRanges = document.querySelector('#range-all')
 
-  const filteredData = Data.filter(data => {
-    const productPrice = data.price
+  if (range100.checked) {
+    return 99;
+  }
+  if (rangeFrom100to500.checked) {
+    return [99, 499];
+  }
+  if (rangeFrom500to1000.checked) {
+    return [499, 999];
+  }
+  if (range1000.checked) {
+    return 999;
+  }
+  if (allRanges.checked) {
+    return null;
+  }
 
-    if (range100.checked) {
-      if (productPrice <= 100) {
-        return productPrice
-      }
-    }
-    if (rangeFrom100to500.checked) {
-      if (productPrice >= 100 && productPrice <=500) {
-        return productPrice
-      }
-    }
-    if (rangeFrom500to1000.checked) {
-      if (productPrice >= 500 && productPrice <= 1000) {
-        return productPrice
-      }
-    }
-    if (range1000.checked) {
-      if (productPrice <= 1000) {
-        return productPrice
-      }
-    }
-    if (allRanges.checked) {
-      return productPrice
-    }
-  })
-
-  renderProductCards(filteredData)
+  return null;
 }
 
 // category function
@@ -90,56 +78,110 @@ function categoryProduct() {
         }
       }
 
-      categoryFilter()
+      applyFilters()
     })
   })
 }
 
-function categoryFilter() {
-  const filteredData = Data.filter(data => {
-    const productCategory = String(data.categoryId)
+// brand function
+function brandProduct() {
+  const checkboxes = document.querySelectorAll('.brand')
 
-    const checked = category.includes(productCategory)
-    
-    return checked
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const value = checkbox.value
+
+      if (checkbox.checked) {
+        brand.push(value)
+        console.log(brand)
+      } else {
+        const index = brand.indexOf(value)
+
+        if (index > -1) {
+          brand.splice(index, 1)
+          console.log(brand)
+        }
+      }
+
+      applyFilters()
+    })
   })
-  
-  renderProductCards(filteredData)
 }
 
-function productQuantity() {
-  const phoneQuantity = document.querySelector('#phone-quantity')
-  const tabletQuantity = document.querySelector('#tablet-quantity')
-  const droneQuantity = document.querySelector('#drone-quantity')
-  const headphoneQuantity = document.querySelector('#headphone-quantity')
-  const audioQuantity = document.querySelector('#audio-quantity')
-  const computerQuantity = document.querySelector('#computer-quantity')
-  const cameraQuantity = document.querySelector('#camera-quantity')
-  const caseQuantity = document.querySelector('#case-quantity')
-  const tvQuantity = document.querySelector('#tv-quantity')
-  const watchesQuantity = document.querySelector('#watches-quantity')
+function applyFilters() {
+  const filteredData = Data.filter(data => {
+    const productPrice = data.price
+    const productCategory = String(data.categoryId)
+    const productBrand = String(data.brandId)
 
-  const categoryIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-  const counts = {}
-  categoryIds.forEach(categoryId => {
-    const count = Data.reduce((total, product) => {
-      if (product.categoryId === categoryId) {
-        return total + 1
+    if (
+      selectedPriceRange &&
+      category.length > 0 &&
+      brand.length > 0
+    ) {
+      if (Array.isArray(selectedPriceRange)) {
+        const [minPrice, maxPrice] = selectedPriceRange;
+        return (
+          productPrice >= minPrice &&
+          productPrice <= maxPrice &&
+          category.includes(productCategory) &&
+          brand.includes(productBrand)
+        );
+      } else {
+        return (
+          productPrice <= selectedPriceRange &&
+          category.includes(productCategory) &&
+          brand.includes(productBrand)
+        );
       }
-      return total
-    }, 0)
-    counts[categoryId] = count
-  })
+    } else if (selectedPriceRange && category.length > 0) {
+      if (Array.isArray(selectedPriceRange)) {
+        const [minPrice, maxPrice] = selectedPriceRange;
+        return (
+          productPrice >= minPrice &&
+          productPrice <= maxPrice &&
+          category.includes(productCategory)
+        );
+      } else {
+        return (
+          productPrice <= selectedPriceRange &&
+          category.includes(productCategory)
+        );
+      }
+    } else if (selectedPriceRange && brand.length > 0) {
+      if (Array.isArray(selectedPriceRange)) {
+        const [minPrice, maxPrice] = selectedPriceRange;
+        return (
+          productPrice >= minPrice &&
+          productPrice <= maxPrice &&
+          brand.includes(productBrand)
+        );
+      } else {
+        return (
+          productPrice <= selectedPriceRange &&
+          brand.includes(productBrand)
+        );
+      }
+    } else if (category.length > 0 && brand.length > 0) {
+      return (
+        category.includes(productCategory) &&
+        brand.includes(productBrand)
+      );
+    } else if (selectedPriceRange) {
+      if (Array.isArray(selectedPriceRange)) {
+        const [minPrice, maxPrice] = selectedPriceRange;
+        return productPrice >= minPrice && productPrice <= maxPrice;
+      } else {
+        return productPrice <= selectedPriceRange;
+      }
+    } else if (category.length > 0) {
+      return category.includes(productCategory);
+    } else if (brand.length > 0) {
+      return brand.includes(productBrand);
+    }
 
-  phoneQuantity.innerHTML = counts[1] || 0
-  tabletQuantity.innerHTML = counts[2] || 0
-  tvQuantity.innerHTML = counts[3] || 0
-  computerQuantity.innerHTML = counts[4] || 0
-  headphoneQuantity.innerHTML = counts[5] || 0
-  watchesQuantity.innerHTML = counts[6] || 0
-  cameraQuantity.innerHTML = counts[7] || 0
-  audioQuantity.innerHTML = counts[8] || 0
-  caseQuantity.innerHTML = counts[9] || 0
-  droneQuantity.innerHTML = counts[10] || 0
+    return true;
+  });
+
+  renderProductCards(filteredData);
 }

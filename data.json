@@ -387,7 +387,7 @@
     "description": "The Sony X950H 4K TV offers impressive picture quality, full-array local dimming, and support for popular HDR formats.",
     "categoryId": 3,
     "brandId": 6,
-    "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-5G-Dg4Ys22p8v8MB6Eb3oWrjIYowIDyvcUhPzYRbVWxOaFCT02Kaztarsnp-of12BnU&usqp=CAU"
+    "src": "https://cdn.shopify.com/s/files/1/0247/9390/7297/products/X9501_00f1ab4c-6ec0-4cc1-a591-3ad31c5b34f6_1200x1200.jpg?v=1614960569"
   },
   {
     "id": 40,
@@ -622,11 +622,11 @@
   {
     "id": 63,
     "productName": "Apple Iphone 8 plus",
-    "price": 1799,
+    "price": 699,
     "rating": 4.6,
-    "description": "The Razer Blade 15 is a high-performance gaming laptop with a sleek design, high refresh rate display, and advanced cooling system.",
-    "categoryId": 2,
-    "brandId": 24,
+    "description": "The iPhone 8 Plus is a powerful and feature-packed smartphone from Apple. It offers a sleek and elegant design with a large 5.5-inch Retina HD display",
+    "categoryId": 1,
+    "brandId": 2,
     "src": "https://files.refurbed.com/ii/apple-iphone-8-plus-1639478333.jpg"
   },
   {
@@ -642,11 +642,11 @@
   {
     "id": 65,
     "productName": "Apple Iphone X",
-    "price": 1199,
+    "price": 899,
     "rating": 4.6,
-    "description": "The Lenovo Legion 5 is a powerful gaming laptop with a high-refresh-rate display, powerful graphics, and a comfortable keyboard.",
-    "categoryId": 2,
-    "brandId": 7,
+    "description": "The iPhone X is a revolutionary smartphone released by Apple. It introduced several significant features and design changes that set a new standard for iPhones.",
+    "categoryId": 1,
+    "brandId": 2,
     "src": "https://m.media-amazon.com/images/I/31TzxTCSKTL.jpg"
   },
   {
