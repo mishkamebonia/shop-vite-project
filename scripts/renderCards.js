@@ -1,3 +1,5 @@
+import {sortCards} from './sort.js'
+
 // product cards wrapper
 const cardsContainer = document.querySelector("#cards-container")
 
@@ -24,6 +26,7 @@ export function renderProductCards(data) {
         <img src="${e.src}" alt="Dummy Image" />
     </div>
     <div class="container">
+    <div class="main-content">
         <div class="rating-price">
         <p class="rating">${e.rating} <i class="fa-regular fa-star"></i></p>
         <p class="price">${e.price}</p>
@@ -43,10 +46,13 @@ export function renderProductCards(data) {
             <p>ADD TO CART</p>
         </button>
         </div>
+        </div>
     </div>`
     }).join('')
 
     PagitationButtons(data, pagitationPages(data, rows))
+
+    sortCards(data)
 
     currentPage = 1
 

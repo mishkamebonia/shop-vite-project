@@ -43,12 +43,14 @@ function categoryQuantity() {
 }
 
 export function brandQuantity() {
-  const showMore = document.querySelector('#view-more')
+  const showMore = document.querySelector('#view-list')
   const hiddenContent = document.querySelector('#hidden-content')
   const dropDown = document.querySelector('.view-more-dropdown')
+  const view = document.querySelector('.view')
 
   showMore.addEventListener('click', () => {
     hiddenContent.classList.toggle('visible')
+    view.classList.toggle('view-less')
     dropDown.classList.toggle('fa-chevron-down')
     dropDown.classList.toggle('fa-chevron-up')
   })

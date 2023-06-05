@@ -6,6 +6,14 @@
   display: block;
 }
 
+.view-more::after {
+  content: " more";
+}
+
+.view-less::after {
+  content: " less";
+}
+
 .filter-col {
   flex: 1 1 20%;
   min-width: 29ch;
@@ -148,13 +156,13 @@
   height: 1px;
   background: #D6D6D6;
 }
-.filter-col .filters .options-form .option-values .view-more {
+.filter-col .filters .options-form .option-values .view-list {
   margin-top: 15px;
   font-size: 12px;
   background: transparent;
   color: rgb(128, 128, 128);
 }
-.filter-col .filters .options-form .option-values .view-more i {
+.filter-col .filters .options-form .option-values .view-list i {
   font-size: 10px;
 }
 .filter-col .filters .options-form:last-child .option-values::after {
@@ -212,7 +220,7 @@
   position: relative;
 }
 .main-col .header-row .row .select .select-dropdown {
-  width: 135px;
+  width: 180px;
   height: 40px;
   border-radius: 8px;
   outline: none;
@@ -221,7 +229,7 @@
   color: #2C2C2C;
   padding: 10px 14px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 17px;
   cursor: pointer;
   -webkit-appearance: none;
@@ -289,7 +297,6 @@
 .main-col main #cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   gap: 22px;
   justify-content: space-between;
   align-items: start;
@@ -316,16 +323,16 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
-.main-col main #cards-container .card .container {
+.main-col main #cards-container .card .main-content {
   padding: 0 20px;
 }
-.main-col main #cards-container .card .container .rating-price {
+.main-col main #cards-container .card .main-content .rating-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 25px 0;
 }
-.main-col main #cards-container .card .container .rating-price .rating {
+.main-col main #cards-container .card .main-content .rating-price .rating {
   color: #fff;
   background: #6F64F8;
   padding: 5.5px 12px;
@@ -336,20 +343,20 @@
   font-size: 14px;
   line-height: 17px;
 }
-.main-col main #cards-container .card .container .rating-price .price {
+.main-col main #cards-container .card .main-content .rating-price .price {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   font-style: normal;
   color: #2c2c2c;
 }
-.main-col main #cards-container .card .container .rating-price .price::before {
+.main-col main #cards-container .card .main-content .rating-price .price::before {
   content: "$";
 }
-.main-col main #cards-container .card .container .description {
+.main-col main #cards-container .card .main-content .description {
   margin-bottom: 25px;
 }
-.main-col main #cards-container .card .container .description h5 {
+.main-col main #cards-container .card .main-content .description h5 {
   font-size: 16px;
   line-height: 19px;
   font-weight: 600;
@@ -357,7 +364,7 @@
   color: #2c2c2c;
   margin-bottom: 5px;
 }
-.main-col main #cards-container .card .container .description p {
+.main-col main #cards-container .card .main-content .description p {
   font-size: 12px;
   line-height: 14px;
   font-weight: 300;

@@ -39,6 +39,17 @@ $searchColor: #606060;
   display: block;
 }
 
+.view-more {
+  &::after {
+    content: ' more';
+  }
+}
+.view-less {
+  &::after {
+    content: ' less';
+  }
+}
+
 // input[type='radio']:after {
 //   width: 15px;
 //   height: 15px;

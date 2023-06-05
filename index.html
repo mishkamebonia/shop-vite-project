@@ -326,7 +326,7 @@
                     <span class="quantity" id="jbl-quantity">100</span>
                   </div>
                 </div>
-                <button id="view-more" class="view-more">view more <i class="view-more-dropdown fa-solid fa-chevron-down"></i></button>
+                <button id="view-list" class="view-list"><span class="view view-more">view</span> <i class="view-more-dropdown fa-solid fa-chevron-down"></i></button>
               </div>
             </section>
             <section class="options-form">
@@ -412,17 +412,18 @@
             <div class="row">
               <div class="select">
                 <select name="list" id="select-dropdown" class="select-dropdown">
-                  <option value="volvo">Default</option>
-                  <option value="saab">test 1</option>
-                  <option value="opel">test 2</option>
-                  <option value="audi">test 3</option>
+                  <option value="default">Default</option>
+                  <option value="price-ascending">Price ascending</option>
+                  <option value="price-descending">Price descending</option>
+                  <option value="rating-ascending">Rating ascending</option>
+                  <option value="rating-descending">Rating descending</option>
                 </select>
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
-              <button class="list-option">
+              <button class="list-option" id="grid-view">
                 <i class="fa-solid fa-border-all"></i>
               </button>
-              <button class="list-option">
+              <button class="list-option" id="menu">
                 <i class="fa-solid fa-bars"></i>
               </button>
             </div>

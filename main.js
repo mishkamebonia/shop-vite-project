@@ -8,6 +8,8 @@ import {productFilters} from './scripts/filterProducts.js'
 
 import {productQuantity} from './scripts/quantityProduct.js'
 
+import {cardStyle} from './scripts/cardStyle.js'
+
 
 renderProductCards(Data)
 
@@ -15,3 +17,5 @@ searchEngine()
 
 productFilters()
 productQuantity()
+
+cardStyle()

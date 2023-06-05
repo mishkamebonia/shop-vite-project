@@ -22,7 +22,7 @@
         position: relative;
 
         .select-dropdown {
-          width: 135px;
+          width: 180px;
           height: 40px;
           border-radius: 8px;
           outline: none;
@@ -31,7 +31,7 @@
           color: #2C2C2C;
           padding: 10px 14px;
           box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
-          font-size: 14px;
+          font-size: 13px;
           line-height: 17px;
           cursor: pointer;
           -webkit-appearance: none;
@@ -112,7 +112,7 @@
   #cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
     gap: 22px;
     justify-content: space-between;
     align-items: start;
@@ -139,7 +139,7 @@
         }
       }
       
-      .container {
+      .main-content {
         padding: 0 20px;
         
         .rating-price {
