@@ -10,8 +10,6 @@ import {productQuantity} from './scripts/quantityProduct.js'
 
 import {hamburgerMenu} from './scripts/hamburgerMenu.js'
 
-// import {wrapperStyle} from './scripts/cardStyle.js'
-
 
 renderProductCards(Data)
 
@@ -21,5 +19,3 @@ productFilters()
 productQuantity()
 
 hamburgerMenu()
-
-// wrapperStyle(Data)

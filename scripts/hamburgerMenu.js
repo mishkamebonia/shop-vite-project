@@ -6,10 +6,16 @@ const overlay = document.querySelector('#overlay')
 
 const closeMenu = document.querySelector('#close-menu-btn')
 
+// wishlist
+const wishlistBtn = document.querySelector('#wishlist-btn')
+const wishlistContent = document.querySelector('.wishlist-content')
+const wishlistDropdown = document.querySelector('.wishlist-dropdown')
+
 
 export function hamburgerMenu() {
   openModal()
   closeModal()
+  wishlistContentToggle()
 }
 
 function openModal() {
@@ -30,4 +36,11 @@ function closeModal() {
     overlay.style.display = 'none'
     document.body.style.overflow = 'auto'
   }
+}
+
+function wishlistContentToggle() {
+  wishlistBtn.addEventListener('click', () => {
+    wishlistContent.classList.toggle('toggle')
+    wishlistDropdown.classList.toggle('fa-angle-up')
+  })
 }

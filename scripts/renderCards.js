@@ -1,5 +1,7 @@
 import { sortCards } from "./sort.js";
 import { wrapperStyle, cardStyle, cardDefaultStyle } from "./cardStyle.js";
+import {wishlistedProducts} from './wishlist.js'
+
 
 // product cards wrapper
 const cardsContainer = document.querySelector("#cards-container");
@@ -38,10 +40,11 @@ export function renderProductCards(data) {
         </div>
     </div>
         <div class="buttons">
-        <button class="wishlist">
+        <input type="checkbox" class="wishlist-checkboxes" id="wishlist-checkbox-${e.id}">
+        <label for="wishlist-checkbox-${e.id}" class="wishlist">
             <i class="fa-regular fa-heart"></i>
             <p>WISHLIST</p>
-        </button>
+        </label>
         <button class="add-cart">
             <i class="fa-solid fa-bag-shopping"></i>
             <p>ADD TO CART</p>
@@ -63,6 +66,8 @@ export function renderProductCards(data) {
   quantityCards.innerHTML = data.length;
   const finishTime = performance.now();
   resultTime.innerHTML = Math.round(finishTime - startTime);
+
+  wishlistedProducts(data)
 }
 
 // create rows
