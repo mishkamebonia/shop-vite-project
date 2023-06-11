@@ -56,6 +56,9 @@
       }
 
       .list-option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 40px;
         height: 40px;
         border-radius: 8px;
@@ -63,6 +66,7 @@
         color: #606060;
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
         font-size: 15px;
+        cursor: pointer;
 
         transition: all 0.15s;
 
@@ -112,11 +116,11 @@
   #cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 22px;
     justify-content: space-between;
     align-items: start;
-    min-height: 1200px;
+    // min-height: 1200px;
 
     .card {
       border-radius: 8px;
@@ -201,7 +205,7 @@
       .buttons {
         display: flex;
         
-        #wishlist {
+        .wishlist {
           border-radius: 0 0 0 8px;
           color: $filterColor;
           box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
@@ -211,7 +215,7 @@
             background: rgba(44, 44, 44, 0.15);
           }
         }
-        #add-cart {
+        .add-cart {
           border-radius: 0 0 8px 0;
           color: #fff;
           background: #6F64F8;
@@ -224,7 +228,7 @@
           }
         }
         
-        #wishlist, #add-cart {
+        .wishlist, .add-cart {
           flex: 1;
           display: flex;
           justify-content: center;

@@ -1,5 +1,4 @@
 import Data from "../data.json" assert { type: 'json' }
-
 import {renderProductCards} from './renderCards.js'
 
 const searchBar = document.querySelector('#search')

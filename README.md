@@ -1,2 +1,3 @@
-# shop-vite-project
+# shop project with vite
+
 shop

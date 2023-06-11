@@ -56,11 +56,24 @@
               <div class="slider-header">
                 <div class="row">
                   <h6>slider</h6>
-                  <span id="slider-range-display"></span>
+                  <div class="form_control">
+                    <div class="form_control_container">
+                        <input class="form_control_container__time__input" type="number" id="fromInput" value="500" min="0" max="5000" disabled/>
+                    </div>
+                    <span>-</span>
+                    <div class="form_control_container">
+                        <input class="form_control_container__time__input" type="number" id="toInput" value="2500" min="0" max="5000" disabled/>
+                    </div>
+                </div>
                 </div>
 
                 <div class="option-values">
-                  <input type="range" id="slider-range" name="slider-range" min="0" max="5000" value="1000">
+                  <div class="range_container">
+                    <div class="sliders_control">
+                        <input id="fromSlider" type="range" value="500" min="0" max="5000"/>
+                        <input id="toSlider" type="range" value="2500" min="0" max="5000"/>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -333,7 +346,8 @@
               <h6>Rating</h6>
               <div class="option-values">
                 <div class="item">
-                  <button>
+                  <input type="checkbox" name="" id="star-5">
+                  <label for="star-5" class="rating-label">
                     <div class="stars">
                       <i class="fa-regular fa-star active"></i>
                       <i class="fa-regular fa-star active"></i>
@@ -342,11 +356,12 @@
                       <i class="fa-regular fa-star active"></i>
                       <p>& Up</p>
                     </div>
-                  </button>
+                  </label>
                   <span class="quantity">100</span>
                 </div>
                 <div class="item">
-                  <button>
+                  <input type="checkbox" name="" id="star-4">
+                  <label for="star-4" class="rating-label">
                     <div class="stars">
                       <i class="fa-regular fa-star active"></i>
                       <i class="fa-regular fa-star active"></i>
@@ -355,11 +370,12 @@
                       <i class="fa-regular fa-star"></i>
                       <p>& Up</p>
                     </div>
-                  </button>
+                  </label>
                   <span class="quantity">100</span>
                 </div>
                 <div class="item">
-                  <button>
+                  <input type="checkbox" name="" id="star-3">
+                  <label for="star-3" class="rating-label">
                     <div class="stars">
                       <i class="fa-regular fa-star active"></i>
                       <i class="fa-regular fa-star active"></i>
@@ -368,11 +384,12 @@
                       <i class="fa-regular fa-star"></i>
                       <p>& Up</p>
                     </div>
-                  </button>
+                  </label>
                   <span class="quantity">100</span>
                 </div>
                 <div class="item">
-                  <button>
+                  <input type="checkbox" name="" id="star-2">
+                  <label for="star-2" class="rating-label">
                     <div class="stars">
                       <i class="fa-regular fa-star active"></i>
                       <i class="fa-regular fa-star active"></i>
@@ -381,11 +398,12 @@
                       <i class="fa-regular fa-star"></i>
                       <p>& Up</p>
                     </div>
-                  </button>
+                  </label>
                   <span class="quantity">100</span>
                 </div>
                 <div class="item">
-                  <button>
+                  <input type="checkbox" name="" id="star-1">
+                  <label for="star-1" class="rating-label">
                     <div class="stars">
                       <i class="fa-regular fa-star active"></i>
                       <i class="fa-regular fa-star"></i>
@@ -394,7 +412,7 @@
                       <i class="fa-regular fa-star"></i>
                       <p>& Up</p>
                     </div>
-                  </button>
+                  </label>
                   <span class="quantity">100</span>
                 </div>
               </div>
@@ -420,12 +438,44 @@
                 </select>
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
-              <button class="list-option" id="grid-view">
-                <i class="fa-solid fa-border-all"></i>
-              </button>
+              <label for="grid-view" class="list-option">
+                <i class="grid-icon fa-solid fa-border-all"></i>
+              </label>
+              <input type="checkbox" id="grid-view">
               <button class="list-option" id="menu">
                 <i class="fa-solid fa-bars"></i>
               </button>
+              <div class="menu-container">
+                <div class="close-menu">
+                  <button id="close-menu-btn" class="close-menu-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <button class="info-btn" id="wishlist-btn">
+                  <div class="info">
+                    <div class="info-header">
+                      <i class="fa-regular fa-heart"></i>
+                      <p>wishlist</p>
+                    </div>
+                    <div class="quantity">
+                      <span class="badge"><span class="badge-inner" id="wishlist-badge">0</span> item</span>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                  </div>
+                </button>
+                <button class="info-btn" id="cart-btn">
+                  <div class="info">
+                    <div class="info-header">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      <p>cart</p>
+                    </div>
+                    <div class="quantity">
+                      <span class="badge"><span class="badge-inner" id="cart-badge">123</span> item</span>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <main class="main">
@@ -443,6 +493,7 @@
         <div id="back-page"></div>
       </div>
     </div>
+    <div id="overlay" class="overlay"></div>
     
     <script type="module" src="./main.js"></script>
   </body>
